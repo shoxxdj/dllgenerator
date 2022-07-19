@@ -10,7 +10,7 @@ Sometimes you can only execute one DLL on a remote machine, and you have no conn
 
 To bypass this you can : 
  - Create a local account
- - Add your local account to Administrators ( or Administrateur 🇫🇷)
+ - Add your local account to Administrators ( or Administrateurs 🇫🇷)
  - Disable UAC control 
 
 Seems easy no ? 

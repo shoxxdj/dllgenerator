@@ -23,6 +23,11 @@ Dllgenerator is based on a template file that (on july 2022) still bypass some A
 It takes your input and generate a sexy DLLFile with it. 
 DLL is not encoded or whatever, but you may consider put it in a wrapper. 
 
+## Dependency 
+
+A cross compilator `mingw-w64-gcc` is used by default but you can customise the `--compilator` parameter.
+
+
 ## Man 
 
 ```

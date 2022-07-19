@@ -2,11 +2,12 @@
 
 ## What ? 
 
-Dllgenerator is a quick tool to generate DLL, it is designed to be quickcly effective. 
+Dllgenerator is a quick tool to generate DLL, it is designed to be quickly effective. 
 
 ## Why ? 
 
-Sometimes you can only execute one DLL on a remote machine, and you have no connect back possible because of AV (like in printnightmare).
+Sometimes you can only execute one DLL on a remote machine, and you have no connect back possible because of AV (like in the printnightmare exploit).
+
 To bypass this you can : 
  - Create a local account
  - Add your local account to Administrators ( or Administrateur 🇫🇷)

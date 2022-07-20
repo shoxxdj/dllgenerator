@@ -89,8 +89,7 @@ This will :
 ### Docker
 ``` 
 docker build -t dllgenerator .
-mkdir output
-docker run -it --rm -v $PWD:/dllgenerator dllgenerator:latest --action create_user add_to_group unset_uac --output ./output/test.dll
+docker run -it --rm -v $PWD:/dllgenerator dllgenerator:latest --action create_user add_to_group unset_uac --output ./test.dll
 ```
 
 ### WARNING

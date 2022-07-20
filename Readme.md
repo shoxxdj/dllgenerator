@@ -84,3 +84,19 @@ This will :
 - Create a local account malt / Il0v3b33r5
 - Add the account malt to BrewersGroup
 - Output to /tmp as beer.dll
+
+
+### Docker
+``` 
+docker build -t dllgenerator .
+mkdir output
+docker run -it --rm -v $PWD:/dllgenerator dllgenerator:latest --action create_user add_to_group unset_uac --output ./output/test.dll
+```
+
+### WARNING
+
+Don't forget to clean the target machine ! Delete the user and delete the registry key if created
+
+```
+reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy
+```

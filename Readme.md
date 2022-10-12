@@ -95,7 +95,8 @@ docker run -it --rm -v $PWD:/dllgenerator dllgenerator:latest --action create_us
 
 ### WARNING
 
-Don't forget to clean the target machine ! Delete the user and delete the registry key if created
+1. Don't forget to clean the target machine ! Delete the user and delete the registry key if created
+2. Don't use a password with a length > 14 characters, it will prompt for an input and dll will fail to add user 
 
 ```
 reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy

